@@ -1,0 +1,2 @@
+# ClansPE
+Plugin ClansPE pocketmine
