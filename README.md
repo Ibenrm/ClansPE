@@ -1,6 +1,11 @@
 # ClansPE
 Plugins ClansPE support Pocketmine-mp
 
+# Features
+- you can send / take money in bank clans, limited for take / send per timer
+- clan stats type UI/MENU
+- simple use
+
 # Commands
 - /clan create (name-clan) | create a clan, if you have permissions: create.clan
 - /clan delete (name-clan) | delete a clan, if you owner clan
