@@ -1,0 +1,12 @@
+name: ClansPE
+main: Ibenrm01\Clan\Main
+version: 3.9
+api: 3.9.6
+author: Ibenrm01
+
+
+permissions:
+  access.clan:
+    default: op
+  create.clan:
+    default: op

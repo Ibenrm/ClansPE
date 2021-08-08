@@ -1,0 +1,41 @@
+---
+##############
+# CONFIG.YML #
+##############
+# AUTHOR: Ibenrm01
+
+# FORMS
+#tags = {clan} = got your name clan
+title: "§l§eCLAN §7|| §b{clan}"
+#tags = {clan} = got your name clan
+#       {username} = your gamertag
+#       {date} = date first created
+#       {member} = count member join
+#       {kdr} = info clan kdr
+#       {mtop} = you in global how many top member
+#       {ktop} = you in global how many top kdr
+#       {bank} = get info profit bank clans
+content: "§bHi, §c{username}\n§aClan: §d{clan}\n§aClan Bank: §d{bank}\n§aClan Member: §d{member} §b| §aTop: §d#{mtop}\n§aClan KDR: §d{kdr} §b| §aTop: §d#{ktop}\n§7CREATED: {date}"
+
+# SYSTEM
+# timezone type: https://www.w3schools.com/php/php_ref_timezones.asp#america
+time-zone: "Asia/Jakarta"
+# type time:
+#    d - Represents the day of the month (01 to 31)
+#    m - Represents a month (01 to 12)
+#    Y - Represents a year (in four digits)
+#    H - 24-hour format of an hour (00 to 23)
+#    h - 12-hour format of an hour with leading zeros (01 to 12)
+#    i - Minutes with leading zeros (00 to 59)
+#    s - Seconds with leading zeros (00 to 59)
+#    a - Lowercase Ante meridiem and Post meridiem (am or pm)
+date-time: "Y-m-d h:i:sa"
+# limited send/take bank clans per days
+bank-per-day: 400
+# got kdr per kills
+getkdr: 00.02
+# get money per kilss
+getmoney: 00.01
+# timer bank, reset limited send/take
+timer-bank: 24 #per hours
+...
