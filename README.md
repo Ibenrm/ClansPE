@@ -4,7 +4,7 @@ Plugins ClansPE support Pocketmine-mp
 # Features
 - you can send / take money in bank clans, limited for take / send per timer
 - clan stats type UI/MENU
-<img src="https://github.com/Ibenrm/ClansPE/blob/main/stats.png" alt="STATS" width="30%">
+<img src="https://github.com/Ibenrm/ClansPE/blob/main/stats.png" alt="STATS" width="40%">
 
 # Commands
 - /clan create (name-clan) | create a clan, if you have permissions: `create.clan`
@@ -21,5 +21,5 @@ Plugins ClansPE support Pocketmine-mp
 - /clan stats | status clan
 - /clan help | list command clan
 - /clan list (name-clan) | list all member in clan (offline/online)
-<img src="https://github.com/Ibenrm/ClansPE/blob/main/command.png" alt="STATS" width="30%">
-<img src="https://github.com/Ibenrm/ClansPE/blob/main/list.png" alt="STATS" width="30%">
+<img src="https://github.com/Ibenrm/ClansPE/blob/main/command.png" alt="STATS" width="50%">
+<img src="https://github.com/Ibenrm/ClansPE/blob/main/list.png" alt="STATS" width="40%">
