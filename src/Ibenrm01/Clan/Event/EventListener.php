@@ -82,8 +82,9 @@ class EventListener implements Listener {
      */
     public function onDamage(EntityDamageEvent $event){
         $entity = $event->getEntity();
-        $damager = $event->getDamager();
+        if($event->getCause() === EntityDamageEvent::CAUSE_FALL) return;
         if($event instanceof EntityDamageByEntityEvent){
+            $damager = $event->getDamager();
             if($entity instanceof Player && $damager instanceof Player) {
                 if(!isset($this->plugin->data["players"][$damager->getName()]["clan"])){
                     return;
