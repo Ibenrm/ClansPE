@@ -11,10 +11,18 @@ use pocketmine\Player;
 use Ibenrm01\Clan\Main;
 use onebone\economyapi\EconomyAPI;
 
+/**
+ * Class ClanCommand
+ * @package Ibenrn01\Clan\Commands
+ */
 class ClanCommand extends PluginCommand {
 
     const MSG = "§l§eCLANS §7// §r";
 
+    /**
+    * ClanCommand constructor.
+    * @param Main $plugin
+    */
     public function __construct(Main $plugin){
         parent::__construct('clans', $plugin);
         $this->setAliases(['clan']);
