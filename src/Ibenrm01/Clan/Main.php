@@ -13,6 +13,7 @@ use pocketmine\utils\Config;
 use pocketmine\level\{
     Level, Position
 };
+use onebone\economyapi\EconomyAPI;
 use pocketmine\command\ConsoleCommandSender;
 
 class Main extends PluginBase implements Listener {
@@ -26,13 +27,21 @@ class Main extends PluginBase implements Listener {
         @mkdir($this->getDataFolder());
         $this->saveDefaultConfig();
         new Config($this->getDataFolder()."database.yml", Config::YAML);
+        if($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") === null){
+            $this->getLogger()->error("You do not have EconomyAPI, please install in poggit!");
+            $this->getServer()->getPluginManager()->disablePlugin($this);
+        }
         sleep(1);
         $this->data = yaml_parse(file_get_contents($this->getDataFolder()."database.yml"));
         $this->Mtop = new Config($this->getDataFolder()."topmember.yml", Config::YAML);
         $this->Ktop = new Config($this->getDataFolder()."topkdr.yml", Config::YAML);
-        $this->getServer()->getCommandMap()->register("clans", new Commands\ClanCommand($this));
+        if($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") != null){
+            $this->getServer()->getCommandMap()->register("clans", new Commands\ClanCommand($this));
+        }
         //REGISTER
-        $this->getServer()->getPluginManager()->registerEvents(new Event\EventListener($this), $this);
+        if($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") != null){
+            $this->getServer()->getPluginManager()->registerEvents(new Event\EventListener($this), $this);
+        }
     }
 
     public function onDisable(){

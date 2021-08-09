@@ -11,18 +11,14 @@ use pocketmine\Player;
 use Ibenrm01\Clan\Main;
 use onebone\economyapi\EconomyAPI;
 
-/**
- * Class ClanCommand
- * @package Ibenrn01\Clan\Commands
- */
+use libs\jojoe77777\FormAPI\{
+    SimpleForm, CustomForm
+};
+
 class ClanCommand extends PluginCommand {
 
     const MSG = "§l§eCLANS §7// §r";
 
-    /**
-    * ClanCommand constructor.
-    * @param Main $plugin
-    */
     public function __construct(Main $plugin){
         parent::__construct('clans', $plugin);
         $this->setAliases(['clan']);
@@ -44,8 +40,7 @@ class ClanCommand extends PluginCommand {
     }
 
     public function statsMe(Player $player){
-        $api = $this->plugin->getServer()->getPluginManager()->getPlugin("FormAPI");
-        $form = $api->createSimpleForm(function (Player $player, int $data = null) {
+        $form = new SimpleForm(function (Player $player, int $data = null) {
             if($data === null or $data >= 0){
                 $player->sendMessage(self::MSG."§aThanks for open menu!");
             }
@@ -500,8 +495,7 @@ class ClanCommand extends PluginCommand {
      * @param Player $player
      */
     public function Ktop(Player $player){
-        $api = $this->plugin->getServer()->getPluginManager()->getPlugin("FormAPI");
-        $form = $api->createSimpleForm(function (Player $player, int $data = null) {
+        $form = new SimpleForm(function (Player $player, int $data = null) {
             if($data === null or $data >= 0){
                 $player->sendMessage(self::MSG."§aThanks for open menu!");
             }
@@ -529,8 +523,7 @@ class ClanCommand extends PluginCommand {
      * @param Player $player
      */
     public function Mtop(Player $player){
-        $api = $this->plugin->getServer()->getPluginManager()->getPlugin("FormAPI");
-        $form = $api->createSimpleForm(function (Player $player, int $data = null) {
+        $form = new SimpleForm(function (Player $player, int $data = null) {
             if($data === null or $data >= 0){
                 $player->sendMessage(self::MSG."§aThanks for open menu!");
             }
