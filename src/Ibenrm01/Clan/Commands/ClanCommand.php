@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 namespace Ibenrm01\Clan\Commands;
 
 use pocketmine\command\{
